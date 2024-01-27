@@ -1,0 +1,26 @@
+.grid-container {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 100px;
+}
+
+#image-gallery {
+    margin-top: 10%;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: .75em;
+}
