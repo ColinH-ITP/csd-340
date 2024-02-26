@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="Author" content="Colin Hawkins" />
+        <meta name="Description" content="Assignment 10.3 for CSD 340" />
+        <meta http-equiv="author" content="Colin Hawkins" />
+        <meta http-equiv="pragma" content="no-cache" />            
+    </head>
+    <title>CSD 340 Development with HTML and CSS</title>
+    <body>
+        <div id="container">
+            <h1>Assignment 10.3: JavaScript - Part 2</h1>            
+            <img alt="" src="images/moon_02.jpg" style="height: 200px; width: 300px;" id="moon" onclick="change(this)"/> 
+            <script language="javascript">
+                function change(image) {
+                    if (image.getAttribute('src') == "images/moon_02.jpg") {
+                        image.src = "images/moon_01.jpg";
+                    } else {
+                        image.src = "images/moon_02.jpg";
+                    }
+                }
+            </script>
+            <p>Click The Picture to Change It!</p>
+        </div>
+    </body>
+</html>
