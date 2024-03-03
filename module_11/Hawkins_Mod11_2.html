@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="Author" content="Colin Hawkins" />
+        <meta name="Description" content="Assignment 11.2 for CSD 340" />
+        <meta http-equiv="author" content="Colin Hawkins" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <script>
+            var items = [];
+
+            // Add
+            function addItem() {
+                if (document.getElementById("toAdd").value != "") {
+                    items.push(document.getElementById("toAdd").value);
+                }
+                document.getElementById("toAdd").value = "";
+            }
+
+            // Delete
+            function deleteItem() {
+                items.pop();
+            }
+
+            // Display
+            function displayList() {
+                var i = 0, text = "";
+                if (items.length == 0) {
+                    document.getElementById("list").innerHTML = "There are currently no items in the list."
+                }
+                else {
+                    while(i < items.length) {
+                        text += ("Item " + (i + 1) + ": " + items[i] + " <br /> ");
+                        i++;
+                    }
+                    document.getElementById("list").innerHTML = text;
+                }
+            }
+        </script>            
+    </head>
+    <title>CSD 340 Development with HTML and CSS</title>
+    <body>
+        <div id="container">
+            <h1>Assignment 11.2: JavaScript - Part 3</h1>
+            <input type="text" id="toAdd" name="input">
+            <button type="button" onclick="addItem()" id="add">Add to List</button>
+            <button type="button" onclick="deleteItem()" id="delete">Delete Last Entry</button>
+            <button type="button" onclick="displayList()" id="display">Display List</button>
+            <hr />
+            <p id="list"></p>
+        </div>
+    </body>
+</html>
