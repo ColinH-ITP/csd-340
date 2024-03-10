@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="Author" content="Colin Hawkins" >
+        <meta name="Description" content="Assignment 12.2 for CSD 340" >
+        <title>CSD 340 Web Development with HTML and CSS</title>
+        <script>
+            const books = 
+            ["1. Berserk - Kentaro Miura",
+             "2. Demons Don't Dream - Piers Anthony",
+             "3. Eragon - Christopher Paolini",
+             "4. The Eye of the World - Robert Jordan",
+             "5. Fablehaven - Brandon Mull",
+             "6. Beyonders: A World Without Heroes - Brandon Mull",
+             "7. Mistborn: The Final Empire - Brandon Sanderson",
+             "8. Death Note - Tsugumi Ohba",
+             "9. Great Expectations - Charles Dickens",
+             "10. Wuthering Heights - Emily Bronte"];
+
+            function asc() {
+                var text = "";
+                for(let i = (books.length - 1); i >= 0; i--) {
+                    text += (books[i] + " <br />");
+                }
+                document.getElementById("list").innerHTML = text;
+            }
+
+            function desc() {
+                var text = "";
+                for(let i = 0; i < books.length; i++) {
+                    text += (books[i] + " <br />");
+                }
+                document.getElementById("list").innerHTML = text;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <h1>Assignment 12.2: JavaScript - Part 4</h1>
+            <div style="width: 45%; float: left;" id="left">
+                <h3>Top 10 Favorite Books</h3>
+                <button type="button" onclick="asc()">Bottom to Top</button>
+                <button type="button" onclick="desc()">Top to Bottom</button>
+                <hr />
+                <p id="list"></p>
+            </div>
+            <div style="margin-top:60%" id="bottom">
+                <a href="../index.html" style="float:right;">Return to Landing Page</a>
+            </div>
+        </div>
+    </body>
+</html>
